@@ -58,6 +58,17 @@ def is_prime_number(num):
 print(is_prime_number(29))
 print("\n")
 
+"""First N composite numbers."""
+def is_composite_number(num):
+    if num <= 2:
+        return f"{num} is not a Composite Number"
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return f"{num} is a Composite Number"
+    return f"{num} is not a Composite Number"
+print(is_composite_number(18))
+print("\n")
+
 """
 Fibonacci Series - A series of number which when added to its previous number result in the next number
 Input: 0, 1
@@ -290,31 +301,98 @@ def power_of_number(base_num, exponent):
 print(power_of_number(4, 2))
 print('\n')
 
-# Find the n-th Fibonacci number.
+"""Find the n-th Fibonacci number."""
+def nth_fibonacci_number(num):
+    original_num = num
+    first_num, second_num = 0, 1
+    fibonacci_list = [first_num, second_num]
+    last_number = 0
+    for i in range(num):
+        first_num, second_num = second_num, first_num + second_num
+        fibonacci_list.extend([second_num])
+        if i == (num - 1):
+            last_number = second_num
+    return f"Fibonacci Series for {original_num} is {', '.join(map(str, fibonacci_list))} and the nth number is: {last_number}"
+print(nth_fibonacci_number(10))
+print('\n')
 
-# Calculate the sum of the first N natural numbers.
 
-# Check if a number is a strong number.
+"""Number is a strong number."""
+def is_strong_number(num):
+    original_num = num
 
-# Generate the first N terms of the Fibonacci series.
+    return f"{original_num} is Strong Number"
 
-# Check if a number is an Armstrong number.
-
-# Calculate the sum of the squares of the first N natural numbers.
+"""
+Sum of the Squares of the first N natural numbers.
+Input: 4
+Output: 1**2 + 2**2 + 3**2+ 4**2 
+"""
+def sum_of_squares_of_numebers(num):
+    original_num = num
+    sq_sum = 0
+    for i in range(1, num+1, 1):
+        sq_sum += i**2
+    return f"sum of the Squares of the first {original_num} natural numbers is: {sq_sum}"
+print(sum_of_squares_of_numebers(4))
+print('\n')
 
 # Find the smallest among three numbers.
+def smallest_amoung_three(num1, num2, num3):
+    smallest_num = float('inf');
+    if num1 < smallest_num:
+        smallest_num = num1
+    if num2 < smallest_num:
+        smallest_num = num2
+    if num3 < smallest_num:
+        smallest_num = num3
+    return f"Smallest among {num1}, {num2}, {num3} is: {smallest_num}"
+print(smallest_amoung_three(10, 7, 17))
+print('\n')
 
-# Check if a number is a Harshad number.
+"""
+Number is a Harshad number.
+Harshad Number - Numbers divisible by the sum of their digits.
+"""
+def is_harshad_number(num):
+    original_num = num
+    num_sum = sum(int(i) for i in str(num))
+    return f"{original_num} is a Harshad Number as its divisible by sum of its digits" \
+        if original_num % num_sum == 2 else \
+        f"{original_num} is not a Harshad Number"
+print(is_harshad_number(121))
+print('\n')
 
-# Find the maximum and minimum in a list of numbers.
+"""Maximum and Minimum in a list of numbers."""
+def find_min_max(num_list):
+    """
+    Way 1
+    max_num, min_num = max(num_list), min(num_list)
+    """
+    # Way 2
+    max_num, min_num = float('-inf'), float('inf')
+    for i in num_list:
+        if max_num < i:
+            max_num = i
+        if min_num > i:
+            min_num = i
+    return f"Max Number, Min Number in list are: {max_num}, {min_num}"
+print(find_min_max([10, 8, 11, 43, 9, 1, 100]))    
+print('\n')
 
-# Calculate the sum of the first N even numbers.
-
-# Calculate the sum of the first N odd numbers.
-
-# Check if a number is a prime number.
-
-# Generate the first N composite numbers.
+"""
+Generate a Pascal's Triangle.
+      1
+    1   1
+   1  2  1
+  1  3 3  1
+ 1 4  6  4 1
+1 5 10 10 5 1
+"""
+def generate_pascal_triangle(num_of_rows):
+    return
+print(generate_pascal_triangle(5))
+print('\n')
 
 # Check if a number is a happy number.
 
@@ -323,8 +401,6 @@ print('\n')
 # Find the missing number in an array of consecutive numbers.
 
 # Check if two numbers are amicable numbers.
-
-# Generate a Pascal's Triangle.
 
 # Check if a number is a Mersenne prime.
 
