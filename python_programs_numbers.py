@@ -390,29 +390,43 @@ Generate a Pascal's Triangle.
 1 5 10 10 5 1
 """
 def generate_pascal_triangle(num_of_rows):
-    return
+    return "To be solved pascal triangle"
 print(generate_pascal_triangle(5))
 print('\n')
 
-# Check if a number is a happy number.
+"""Sum of the cubes of the first N natural numbers."""
+def sum_of_cubes_of_numbers(num):
+    original_num = num
+    sum_num = 0
+    for number in range(1, num+1):
+        sum_num += number**3
+    return f"Sum of Cubes for Natural Numbers till {original_num} is:{sum_num}"
+print(sum_of_cubes_of_numbers(7))
+print('\n')
 
-# Calculate the sum of the cubes of the first N natural numbers.
+"""Prime factors of a number."""
+def is_prime_factors(num):
+    original_num = num
+    first_prime = []
+    for n_num in range(2, num + 1):
+        if num % n_num == 0:
+            num //= n_num
+            first_prime.append(n_num)
+    return f"Prime Factors for provided number {original_num} are: {', '.join(map(str, first_prime))}"
+print(is_prime_factors(18))
+print('\n')
 
-# Find the missing number in an array of consecutive numbers.
+"""Missing number in an array of consecutive numbers."""
+def is_missing_number_in_array(num_list):
+    original_list = num_list
+    len_num_list = len(num_list) + 1
+    arr_missin_sum = len_num_list * (len_num_list + 1) // 2
+    sum_num_list = sum(int(number) for number in num_list if str(number).isnumeric())
+    missing_number = sum_num_list - arr_missin_sum 
+    return f"Missing number in provided list is: {abs(missing_number)}"
+print(is_missing_number_in_array([1,2,3,4,6]))
+print('\n')
 
-# Check if two numbers are amicable numbers.
-
-# Check if a number is a Mersenne prime.
-
-# Find the prime factors of a number.
-
-# Calculate the digital root of a number.
-
-# Check if a number is a Kaprekar number.
-
-# Generate the Collatz sequence for a number.
-
-# Check if a number is a Magic number.
 
 # Calculate the sum of the first N terms of an arithmetic series.
 
@@ -422,118 +436,85 @@ print('\n')
 
 # Generate the first N terms of a geometric series.
 
-# Check if a number is a Catalan number.
-
-# Calculate the sum of the first N terms of a harmonic series.
-
-# Check if a number is a Smith number.
-
 # Calculate the sum of prime numbers up to N.
-
-# Check if a number is a Perfect square.
 
 # Find the number of trailing zeroes in a factorial.
 
-# Check if a number is a Fermat prime.
-
-# Generate the first N Bell numbers.
-
-# Check if a number is a Keith number.
-
-# Calculate the nth term of a Lucas series.
-
-# Check if a number is a Lychrel number.
-
-# Find the N-th term of a Tribonacci series.
-
-# Check if a number is a Sophie Germain prime.
-
 # Generate a sequence of prime numbers up to N.
-
-# Calculate the sum of the first N terms of a geometric series.
-
-# Check if a number is a Sphenic number.
 
 # Calculate the product of digits of a number.
 
-# Check if a number is a Twin prime.
-
-# Generate the first N terms of a Pell series.
-
-# Check if a number is a Super prime.
-
-# Generate the Ulam sequence up to N.
-
-# Check if a number is a Carmichael number.
-
 # Calculate the sum of factorials of digits of a number.
 
-# Check if a number is a Happy prime.
-
 # Find the number of prime numbers between two numbers.
-
-# Check if a number is a Self number.
-
-# Generate the first N terms of an Eulerian series.
-
-# Check if a number is a Circular prime.
 
 # Calculate the product of the first N natural numbers.
 
 # Find the next prime number greater than N.
 
-# Check if a number is a Friedman number.
-
-# Generate the first N terms of a Stern's diatomic series.
-
-# Check if a number is a Pseudoprime.
-
-# Find the N-th term of a Jacobsthal series.
-
-# Check if a number is a Tetranacci number.
-
-# Generate the first N terms of a Motzkin number series.
-
-# Check if a number is a Nearly perfect number.
-
-# Calculate the sum of the first N terms of a Bernoulli series.
-
-# Check if a number is a Primorial prime.
-
-# Generate the first N terms of a Thue-Morse sequence.
-
-# Check if a number is an Achilles number.
-
 # Calculate the sum of digits of a number raised to a power.
-
-# Check if a number is a Narcissistic number.
 
 # Generate the first N terms of a Fibonacci-like sequence.
 
-# Check if a number is a Star number.
-
 # Calculate the product of prime numbers up to N.
-
-# Check if a number is an Ore number.
-
-# Generate the first N terms of a Lagged Fibonacci series.
-
-# Check if a number is a Practical number.
 
 # Find the sum of digits of a number.
 
-# Check if a number is an Extravagant number.
-
-# Generate the first N terms of a Lucas-Carmichael number series.
-
-# Check if a number is a Happy number.
-
-# Calculate the sum of the digits of a number until a single digit is obtained.
-
-# Check if a number is an Economical number.
+# Calculate the sum of the first N terms of a Fibonacci series.
 
 # Generate the first N terms of a Fibonacci-like series.
 
-# Check if a number is a Triangular number.
+# Calculate the sum of the digits of a number until a single digit is obtained.
 
-# Calculate the sum of the first N terms of a Fibonacci series.
+
+"""
+    Generate the Collatz sequence for a number.
+    Calculate the digital root of a number.
+    Check if a number is a happy number.
+    Check if two numbers are amicable numbers.
+    Check if a number is a Mersenne prime.
+    Check if a number is a Kaprekar number.
+    Check if a number is a Magic number.
+    Check if a number is a Catalan number.
+    Calculate the sum of the first N terms of a harmonic series.
+    Check if a number is a Smith number.
+    Check if a number is a Fermat prime.
+    Generate the first N Bell numbers.
+    Check if a number is a Keith number.
+    Calculate the nth term of a Lucas series.
+    Check if a number is a Lychrel number.
+    Find the N-th term of a Tribonacci series.
+    Check if a number is a Sophie Germain prime.
+    Calculate the sum of the first N terms of a geometric series.
+    Check if a number is a Sphenic number.
+    Check if a number is a Twin prime.
+    Generate the first N terms of a Pell series.
+    Check if a number is a Super prime.
+    Generate the Ulam sequence up to N.
+    Check if a number is a Carmichael number.
+    Check if a number is a Happy prime.
+    Check if a number is a Self number.
+    Generate the first N terms of an Eulerian series.
+    Check if a number is a Circular prime.
+    Check if a number is a Friedman number.
+    Generate the first N terms of a Stern's diatomic series.
+    Check if a number is a Pseudoprime.
+    Find the N-th term of a Jacobsthal series.
+    Check if a number is a Tetranacci number.
+    Generate the first N terms of a Motzkin number series.
+    Check if a number is a Nearly perfect number.
+    Calculate the sum of the first N terms of a Bernoulli series.
+    Check if a number is a Primorial prime.
+    Generate the first N terms of a Thue-Morse sequence.
+    Check if a number is an Achilles number.
+    Check if a number is a Narcissistic number.
+    Check if a number is a Star number.
+    Check if a number is an Ore number.
+    Generate the first N terms of a Lagged Fibonacci series.
+    Check if a number is a Practical number.
+    Check if a number is an Extravagant number.
+    Generate the first N terms of a Lucas-Carmichael number series.
+    Check if a number is a Happy number.
+    Check if a number is an Economical number.
+    Check if a number is a Triangular number.
+"""
