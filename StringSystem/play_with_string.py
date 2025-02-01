@@ -1,11 +1,38 @@
+
+def no_of_occurrence_of_word_in_string(input_string, word):
+    word_count = 0
+    # input_string.count(word)
+    for w in input_string.split():
+        if word in w or word == w:
+            word_count += 1
+    return f"occurence of word {word_count}"
+
+def no_of_vowels_in_string(input_string):
+    actual_vowels = "aeiou"
+    original_string = str(input_string)
+    vowel_count = 0
+    actual_vowels_count = {}
+    for char in input_string.lower():
+        if char in actual_vowels and char.isalpha():
+            vowel_count += 1
+            if char in actual_vowels_count.keys():
+                actual_vowels_count[char] = int(actual_vowels_count[char]) + 1
+            else:
+                actual_vowels_count[char] = 1
+    return f"Count of Vowels: {vowel_count}"
+
+def length_of_string(input_string):
+    str_len = 0
+    # str_len = len(input_string)
+    for char in input_string.replace(" ", ''):
+        str_len += 1
+    return f"Length of String: {str_len}"
+
+    
 """
-Find the number of occurrences of a specific word in a string.
-
-Count the number of vowels in a string.
-
 Count the number of consonants in a string.
 
-Find the length of a string.
+
 
 Reverse a string.
 
