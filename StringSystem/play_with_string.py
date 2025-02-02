@@ -132,6 +132,20 @@ def reverse_word_in_string(input_string):
     return f"Reversed String: {reversed_string}"
 print(reverse_word_in_string('This is a statement'))
 print('\n')
+
+def compress_string(input_string):
+    compressed_string = ""
+    count = 1
+    for i in range(1, len(input_string)):
+        if input_string[i] == input_string[i - 1]:
+            count += 1
+        else:
+            compressed_string += str(count) + input_string[i - 1]
+            count = 1
+    compressed_string += str(count) + input_string[-1]
+    return compressed_string
+print(compress_string("aaabbbccaabb"))  # Output: "3a3b2c2a2b"
+
 """
 Convert a string to uppercase.
 
