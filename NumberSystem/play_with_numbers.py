@@ -1,5 +1,85 @@
-import math
+"""
+Python Numbers Cheat Sheet
 
+Built-in Functions
+------------------
+abs(x)
+    Returns the absolute value of x.
+divmod(a, b)
+    Returns a tuple containing the quotient and remainder of a divided by b.
+max(iterable, *args)
+    Returns the largest item in an iterable or among multiple arguments.
+min(iterable, *args)
+    Returns the smallest item in an iterable or among multiple arguments.
+round(number, ndigits)
+    Rounds a floating-point number to a specified number of decimal places.
+sum(iterable, start=0)
+    Returns the sum of an iterable's items plus a starting value.
+pow(base, exp, mod=None)
+    Returns base raised to the power of exp, optionally modulo mod.
+int(x, base=10)
+    Converts a number or string x to an integer. Base conversion is supported.
+float(x)
+    Converts a number or string x to a floating-point number.
+complex(real, imag=0.0)
+    Creates a complex number.
+
+Conversions
+-----------
+bin(x)
+    Converts an integer to a binary string.
+hex(x)
+    Converts an integer to a hexadecimal string.
+oct(x)
+    Converts an integer to an octal string.
+bool(x)
+    Converts a value to a Boolean (True or False).
+
+Math Module Methods
+-------------------
+math.ceil(x)
+    Returns the ceiling of x (smallest integer greater than or equal to x).
+math.floor(x)
+    Returns the floor of x (largest integer less than or equal to x).
+math.sqrt(x)
+    Returns the square root of x.
+math.exp(x)
+    Returns e raised to the power of x.
+math.log(x, base=math.e)
+    Returns the logarithm of x to the specified base.
+math.log10(x)
+    Returns the base-10 logarithm of x.
+math.log2(x)
+    Returns the base-2 logarithm of x.
+math.sin(x)
+    Returns the sine of x radians.
+math.cos(x)
+    Returns the cosine of x radians.
+math.tan(x)
+    Returns the tangent of x radians.
+math.degrees(x)
+    Converts an angle from radians to degrees.
+math.radians(x)
+    Converts an angle from degrees to radians.
+math.factorial(x)
+    Returns the factorial of x.
+math.gcd(a, b)
+    Returns the greatest common divisor of a and b.
+
+Random Module Methods
+---------------------
+random.random()
+    Returns a random float between 0.0 and 1.0.
+random.randint(a, b)
+    Returns a random integer between a and b inclusive.
+random.choice(seq)
+    Returns a random element from a non-empty sequence.
+random.shuffle(seq)
+    Shuffles the elements of a sequence in place.
+random.sample(population, k)
+    Returns a k-length list of unique elements from the population.
+
+"""
 """
 Handle Precision Value 
 Input - Number/Decimal/Floating Input and decimal plances

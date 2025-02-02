@@ -1,11 +1,67 @@
+"""
+Here's a cheat sheet of Python's string methods to help you quickly reference and use them:
+-------------------------------------------------------------------------------------------------------------------------
+| Method                           | Description                                                                        |
+|----------------------------------|------------------------------------------------------------------------------------|
+| `capitalize()`                   | Capitalizes the first character of the string.                                     |
+| `casefold()`                     | Converts the string to lowercase, more aggressive than `lower()`.                  |
+| `center(width, fillchar)`        | Centers the string, padding it with `fillchar`.                                    |
+| `count(sub, start, end)`         | Counts occurrences of `sub` in the string.                                         |
+| `encode(encoding, errors)`       | Encodes the string using the specified encoding.                                   |
+| `endswith(suffix, start, end)`   | Checks if the string ends with `suffix`.                                           |
+| `expandtabs(tabsize)`            | Expands tabs in the string to multiple spaces.                                     |
+| `find(sub, start, end)`          | Finds the first occurrence of `sub` in the string.                                 |
+| `format(*args, **kwargs)`        | Formats the string using specified arguments.                                      |
+| `format_map(mapping)`            | Formats the string using a dictionary.                                             |
+| `index(sub, start, end)`         | Finds the first occurrence of `sub` in the string. Raises ValueError if not found. |
+| `isalnum()`                      | Checks if all characters in the string are alphanumeric.                           |
+| `isalpha()`                      | Checks if all characters in the string are alphabetic.                             |
+| `isascii()`                      | Checks if all characters in the string are ASCII.                                  |
+| `isdecimal()`                    | Checks if all characters in the string are decimal characters.                     |
+| `isdigit()`                      | Checks if all characters in the string are digits.                                 |
+| `isidentifier()`                 | Checks if the string is a valid identifier.                                        |
+| `islower()`                      | Checks if all characters in the string are lowercase.                              |
+| `isnumeric()`                    | Checks if all characters in the string are numeric.                                |
+| `isprintable()`                  | Checks if all characters in the string are printable.                              |
+| `isspace()`                      | Checks if all characters in the string are whitespace.                             |
+| `istitle()`                      | Checks if the string is in title case.                                             |
+| `isupper()`                      | Checks if all characters in the string are uppercase.                              |
+| `join(iterable)`                 | Joins elements of an iterable with the string as a separator.                      |
+| `ljust(width, fillchar)`         | Left-justifies the string, padding it with `fillchar`.                             |
+| `lower()`                        | Converts all characters to lowercase.                                              |
+| `lstrip(chars)`                  | Removes leading characters specified in `chars`.                                   |
+| `maketrans(x, y, z)`             | Creates a translation table.                                                       |
+| `partition(sep)`                 | Splits the string into a tuple at the first occurrence of `sep`.                   |
+| `replace(old, new, count)`       | Replaces occurrences of `old` with `new`.                                          |
+| `rfind(sub, start, end)`         | Finds the last occurrence of `sub` in the string.                                  |
+| `rindex(sub, start, end)`        | Finds the last occurrence of `sub` in the string. Raises ValueError if not found.  |
+| `rjust(width, fillchar)`         | Right-justifies the string, padding it with `fillchar`.                            |
+| `rpartition(sep)`                | Splits the string into a tuple at the last occurrence of `sep`.                    |
+| `rsplit(sep, maxsplit)`          | Splits the string from the right using `sep`.                                      |
+| `rstrip(chars)`                  | Removes trailing characters specified in `chars`.                                  |
+| `split(sep, maxsplit)`           | Splits the string using `sep`.                                                     |
+| `splitlines(keepends)`           | Splits the string at line breaks.                                                  |
+| `startswith(prefix, start, end)` | Checks if the string starts with `prefix`.                                         |
+| `strip(chars)`                   | Removes leading and trailing characters specified in `chars`.                      |
+| `swapcase()`                     | Swaps the case of all characters in the string.                                    |
+| `title()`                        | Capitalizes the first character of each word in the string.                        |
+| `translate(table)`               | Translates the string using a translation table.                                   |
+| `upper()`                        | Converts all characters to uppercase.                                              |
+| `zfill(width)`                   | Pads the string with zeros on the left to fill the specified width.                |
+-------------------------------------------------------------------------------------------------------------------------
+"""
 
-def no_of_occurrence_of_word_in_string(input_string, word):
+def no_of_occurrence_of_word_in_string(input_string, word = None):
     word_count = 0
+    if word is None:
+        word = input_string.split()[0]
     # input_string.count(word)
     for w in input_string.split():
         if word in w or word == w:
             word_count += 1
-    return f"occurence of word {word_count}"
+    return f"Occurence of word `{word}` is: {word_count} and calculated on the basis of similar pattern presence in statement and as a word"
+print(no_of_occurrence_of_word_in_string('This is a practice statement and is for prac', 'is'))
+print('\n')
 
 def no_of_vowels_in_string(input_string):
     actual_vowels = "aeiou"
@@ -16,26 +72,67 @@ def no_of_vowels_in_string(input_string):
         if char in actual_vowels and char.isalpha():
             vowel_count += 1
             if char in actual_vowels_count.keys():
-                actual_vowels_count[char] = int(actual_vowels_count[char]) + 1
+                actual_vowels_count[char] = int(actual_vowels_count.get(char,0)) + 1
             else:
                 actual_vowels_count[char] = 1
-    return f"Count of Vowels: {vowel_count}"
+    return f"Total Count of Vowels: {vowel_count} and vowels list count: {actual_vowels_count}"
+print(no_of_vowels_in_string('This is a practice statement'))
+print('\n')
 
 def length_of_string(input_string):
     str_len = 0
     # str_len = len(input_string)
     for char in input_string.replace(" ", ''):
         str_len += 1
-    return f"Length of String: {str_len}"
+    return f"Length of String (exclusing spaces): {str_len}"
+print(length_of_string('This is    a  practice  statement'))
+print('\n')
 
-    
+def no_of_consonants_in_string(input_string):
+    vowels = 'aeiou'
+    original_string = str(input_string)
+    non_vowel_count = 0
+    actual_non_vowels_count = {}
+    for char in input_string.lower():
+        if char not in actual_non_vowels_count and char.isalpha() and char not in vowels:
+            non_vowel_count += 1
+            actual_non_vowels_count[char] = 1
+        if char in actual_non_vowels_count.keys() and char not in vowels:
+            actual_non_vowels_count[char] = int(actual_non_vowels_count.get(char, 0)) + 1                
+    return f"Total Count of Consonants: {non_vowel_count} and Consonants list count: {actual_non_vowels_count}"
+print(no_of_consonants_in_string('This is a practice statement and is for practice'))
+print('\n')
+
+def reverse_a_string(input_string):
+    original_string = str(input_string)
+    reversed_string = ''
+    for index in range(len(original_string) - 1, -1, -1):
+        reversed_string += str(original_string[index])
+    return f"Reversed String: {reversed_string}"
+print(reverse_a_string('This is a statement'))
+print('\n')
+
+def reverse_word_in_string(input_string):
+    original_string = str(input_string)
+    words_list = []
+    formed_word = ""
+    reversed_string = ""
+    for char in original_string:
+        if char != " ":
+            formed_word += char
+        else:
+            words_list.append(formed_word)
+            formed_word = ""
+    # Append the last formed word
+    if formed_word:
+        words_list.append(formed_word)
+
+    for index in range(len(words_list) - 1, -1, -1):
+        reversed_string += words_list[index] + " "
+    return f"Reversed String: {reversed_string}"
+print(reverse_word_in_string('This is a statement'))
+print('\n')
 """
-Count the number of consonants in a string.
-
-
-
-Reverse a string.
-
 Convert a string to uppercase.
 
 Convert a string to lowercase.
