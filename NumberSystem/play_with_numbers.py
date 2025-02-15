@@ -408,7 +408,7 @@ Sum of the Squares of the first N natural numbers.
 Input: 4
 Output: 1**2 + 2**2 + 3**2+ 4**2 
 """
-def sum_of_squares_of_numebers(num):
+def sum_of_squares_of_numbers(num):
     original_num = num
     sq_sum = 0
     for i in range(1, num+1, 1):
