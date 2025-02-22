@@ -145,18 +145,31 @@ def compress_string(input_string):
     compressed_string += str(count) + input_string[-1]
     return compressed_string
 print(compress_string("aaabbbccaabb"))  # Output: "3a3b2c2a2b"
+print('\n')
+
+def capitalize_first_letter_of_each_word_in_string(input_string = ''):
+    # print(input_string.title())
+    input_string1 = " ".join(list(char[0].upper() + char[1:] for char in input_string.split(' '))) 
+    return f"""Updated String: {input_string1}"""
+print(capitalize_first_letter_of_each_word_in_string("this is a string"))
+print('\n')
+
+def replace_substring(input_string, to_replace, value):
+    return f"Replacement of '{input_string}' is: {input_string.replace(to_replace,value )}"
+print(replace_substring("this is a string", 'a', 'another'))
+print('\n')
+
+def is_string_palindrom(input_string):
+    # input_string == input_string[::-1]
+    # reverse_a_string(input_string) == input_string
+    reversed_string = ''
+    for index in range(len(input_string) - 1, -1, -1):
+        reversed_string += str(input_string[index])
+    return f"'{input_string}' is Palindrom" if input_string == reversed_string else f"'{input_string} is not Palindrom'"
+print(is_string_palindrom("abcba"))
+print('\n')
 
 """
-Convert a string to uppercase.
-
-Convert a string to lowercase.
-
-Capitalize the first letter of each word in a string.
-
-Replace a specific substring in a string with another substring.
-
-Check if a string is a palindrome.
-
 Find the index of the first occurrence of a substring in a string.
 
 Find the index of the last occurrence of a substring in a string.
