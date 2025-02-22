@@ -350,7 +350,7 @@ def is_perfect_number(num):
     for i in range(1, num):
         if num % i == 0:
             divisors_num  += i
-            if divisors_num != 28:
+            if divisors_num != num:
                 divisors_list.append(divisors_num)
     return f'{original_num} is a Perfect Number as sum of following divisors: {", ".join((map(str, divisors_list)))} is equal to it'
 print(is_perfect_number(28))
