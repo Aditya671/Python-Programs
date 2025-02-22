@@ -170,7 +170,7 @@ Palindrom Number - A number when reversed result in exact same number
 Input: 12321, 16461
 Output: 12321, 16461
 """
-def is_palindrom(num):
+def is_palindrom_number(num):
     # reversed_num = "".join(reversed(str(num)))
     original_num = num
     reversed_num = 0
@@ -179,7 +179,7 @@ def is_palindrom(num):
         reversed_num = (reversed_num * 10) + remainder
         num = num // 10
     return f"{original_num} is a palindrom number" if int(original_num) == int(reversed_num) else f"{original_num} is not a palindrom number"
-print(is_palindrom(16461))
+print(is_palindrom_number(16461))
 print("\n")
 
 """
@@ -197,7 +197,7 @@ Largest Among Three Numbers
 Input: 10, 12, 7
 Output: 12
 """
-def is_max_number(num1, num2, num3):
+def is_max_among_three_number(num1, num2, num3):
     # Way 1
     if type(num1) == 'list':
         return f"{max(num1)} is the largest number"
@@ -223,7 +223,7 @@ def is_max_number(num1, num2, num3):
     if c > max_num:
         max_num
     return f"{max_num} is the largest number"
-print(is_max_number(10, 12, 7))
+print(is_max_among_three_number(10, 12, 7))
 print("\n")
 
 """
@@ -378,7 +378,7 @@ def power_of_number(base_num, exponent):
     for i in range(exponent):
         result *= base_num
     return f"Power for provided number {base_num} is: {result}"
-print(power_of_number(4, 2))
+print(power_of_number(4, 3))
 print('\n')
 
 """Find the n-th Fibonacci number."""
@@ -414,7 +414,7 @@ def sum_of_squares_of_numbers(num):
     for i in range(1, num+1, 1):
         sq_sum += i**2
     return f"sum of the Squares of the first {original_num} natural numbers is: {sq_sum}"
-print(sum_of_squares_of_numebers(4))
+print(sum_of_squares_of_numbers(4))
 print('\n')
 
 # Find the smallest among three numbers.

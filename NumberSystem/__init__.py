@@ -72,3 +72,46 @@ Here's a handy cheat sheet for Python operators. Operators allow you to perform 
 
 
 """
+import play_with_numbers as pn
+class NumberSystem:
+    def __init__(my_instances):
+        my_instances.description = 'Class to Execute various methodologies related to numbers'
+    
+    percision_value = lambda input_num : pn.return_percision_value(input_num)
+
+    reverse_number = lambda input_num : pn.reverse_a_num(input_num)
+
+    armstrong_number = lambda input_num : pn.is_armstrong_number(input_num)
+
+    perfect_number = lambda input_num : pn.is_perfect_number(input_num)
+
+    prime_number = lambda input_num : pn.is_prime_number(input_num)
+
+    prime_number_list = lambda input_num : pn.get_prime_number_list(input_num)
+    
+    Composite_number = lambda input_num : pn.is_composite_number(input_num)
+
+    palindrom_number = lambda input_num : pn.is_palindrom_number(input_num)
+
+    even_odd_number = lambda input_num : pn.is_num_even_odd(input_num)
+
+    perfect_square = lambda input_num: pn.is_perfect_square(input_num)
+
+    common_divisor = lambda input_num_1, input_num_2 : pn.is_common_divisor(input_num_1, input_num_2)
+    
+    least_common_divisor = lambda input_num_1, input_num_2 : pn.is_least_common(input_num_1, input_num_2)
+
+    decimal_form_from_binary = lambda input_num: pn.is_decimal_from_binary(input_num)
+
+    binary_form_from_decimal = lambda input_num : pn.is_binary_from_decimal(input_num)
+
+    factorial_number = lambda input_num : pn.factorial_of_number(input_num)
+
+    sum_of_all_digits = lambda input_num : pn.is_sum_of_digits_of_number(input_num)
+
+    number_raise_to_power = lambda input_num, to_power : pn.power_of_number(input_num, to_power)
+
+    maximum_among_three = lambda input_num_1, input_num_2, input_num_3 : pn.is_max_among_three_number(input_num_1, input_num_2, input_num_3) 
+        
+    fibonacci_series = lambda input_num: pn.is_fibonacci_series(input_num)
+
