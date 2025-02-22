@@ -89,7 +89,7 @@ class NumberSystem:
 
     prime_number_list = lambda input_num : pn.get_prime_number_list(input_num)
     
-    Composite_number = lambda input_num : pn.is_composite_number(input_num)
+    composite_number = lambda input_num : pn.is_composite_number(input_num)
 
     palindrom_number = lambda input_num : pn.is_palindrom_number(input_num)
 
