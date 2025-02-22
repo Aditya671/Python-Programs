@@ -112,7 +112,7 @@ Input: 153
 Output: 153
 """
 def is_armstrong_number(num = 0):
-    num = str(num)
+    num = str(int(num))
     num_len = len(num)
     arm_number = sum(int(digit)** num_len for digit in num )
     if arm_number != int(num):

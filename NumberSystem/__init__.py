@@ -74,14 +74,14 @@ Here's a handy cheat sheet for Python operators. Operators allow you to perform 
 """
 import play_with_numbers as pn
 class NumberSystem:
-    def __init__(my_instances):
-        my_instances.description = 'Class to Execute various methodologies related to numbers'
+    def __init__(self):
+        self.description = 'Class to Execute various methodologies related to numbers'
     
-    percision_value = lambda input_num : pn.return_percision_value(input_num)
+    percision_value = lambda self, input_num : pn.return_percision_value(input_num)
 
     reverse_number = lambda input_num : pn.reverse_a_num(input_num)
 
-    armstrong_number = lambda input_num : pn.is_armstrong_number(input_num)
+    armstrong_number = lambda self, input_num : pn.is_armstrong_number(input_num)
 
     perfect_number = lambda input_num : pn.is_perfect_number(input_num)
 
@@ -115,3 +115,8 @@ class NumberSystem:
         
     fibonacci_series = lambda input_num: pn.is_fibonacci_series(input_num)
 
+number_system = NumberSystem()
+
+# Call the methods
+percision_value_result = number_system.armstrong_number(111.456)
+NumberSystem().__init__()
