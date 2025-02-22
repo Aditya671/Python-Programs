@@ -169,22 +169,62 @@ def is_string_palindrom(input_string):
 print(is_string_palindrom("abcba"))
 print('\n')
 
+def split_string_to_list_of_words(input_string, splitter=''):
+    return input_string.split() if not splitter else input_string.split(splitter)
+print(split_string_to_list_of_words("this is a string"))
+print('\n')
+
+def join_words_to_form_string(words_list):
+    return " ".join(words_list)
+print(join_words_to_form_string(['this', 'is', 'a', 'string', 'from', 'list', 'of', 'words' ]))
+print('\n')
+
+def remove_lead_tail_white_space_from_string(input_string):
+    # input_string.lstrip()
+    # input_string.rstrip()
+    # input_string.strip()
+    # input_string[1:-1]
+    return input_string.strip()
+print(remove_lead_tail_white_space_from_string(" this is a string "))
+print('\n')
+
+def remove_digits_from_string(input_string):
+    return "".join([str(char) for char in input_string if str(char).isalpha()])
+print(remove_digits_from_string("Hello123World456"))
+print('\n')
+
+def remove_special_characters_from_string(input_string):
+    return "".join([str(char) for char in input_string if str(char).isalnum()])
+print(remove_special_characters_from_string("Hello123@#$World456"))
+print('\n')
+
+
+string_contains_only_digits = lambda input_string: input_string.isdigit()
+print(string_contains_only_digits('Hello123'))
+print('\n')
+
+string_contains_only_alphabets = lambda input_string: input_string.isalpha()
+print(string_contains_only_alphabets('Hello123'))
+print('\n')
+
+string_contains_only_alphanumeric_characters = lambda input_string: input_string.isalnum()
+print(string_contains_only_alphanumeric_characters('Hello123'))
+print('\n')
+
+string_to_list_of_characters = lambda input_string: list(input_string)
+print(string_to_list_of_characters('Hello123'))
+print('\n')
+
+list_of_characters_to_string = lambda input_list:"".join(input_list)
+print(list_of_characters_to_string(['H', 'e', 'l', 'l', 'o', '1', '2', '3']))
+print('\n')
+
 """
 Find the index of the first occurrence of a substring in a string.
 
 Find the index of the last occurrence of a substring in a string.
 
 Extract a substring from a string.
-
-Split a string into a list of words.
-
-Join a list of words into a string.
-
-Remove leading and trailing whitespace from a string.
-
-Remove all whitespace from a string.
-
-Count the number of words in a string.
 
 Find the most frequent character in a string.
 
@@ -193,20 +233,6 @@ Find the least frequent character in a string.
 Replace all vowels in a string with a specific character.
 
 Replace all consonants in a string with a specific character.
-
-Check if a string contains only digits.
-
-Check if a string contains only alphabets.
-
-Check if a string contains only alphanumeric characters.
-
-Convert a string to a list of characters.
-
-Convert a list of characters to a string.
-
-Remove all digits from a string.
-
-Remove all special characters from a string.
 
 Find the number of uppercase letters in a string.
 
