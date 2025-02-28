@@ -1,3 +1,12 @@
+
+def find_max_in_list(input_list):
+    # return max(list(filter(lambda x: str(x).isnumeric(), input_list)))
+    max_num = float('-inf')
+    for num in input_list:
+        if str(num).isnumeric() and num > max_num:
+            max_num = num
+    return max_num
+
 """
 Find the maximum number in a list.
 

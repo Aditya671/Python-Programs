@@ -87,8 +87,8 @@ Output - Value with percision
 """
 def return_percision_value(num = 0, precision_upto = 1):
     return f"""Percision value for {num} is: {round(num, precision_upto)}"""
-print(return_percision_value(1234.1234567, 5))
-print("\n")
+# print(return_percision_value(1234.1234567, 5))
+# print("\n")
 
 """
 Reverse a Number
@@ -102,8 +102,8 @@ def reverse_a_num(num = 0):
         reverse_num = (reverse_num * 10) + (num % 10)        
         num = num // 10
     return f"Reverse Number for {num} is: {reverse_num} "
-print(reverse_a_num(1234))
-print("\n")
+# print(reverse_a_num(1234))
+# print("\n")
 
 
 """
@@ -118,8 +118,8 @@ def is_armstrong_number(num = 0):
     if arm_number != int(num):
         return f"{num} is not an armstrong number"
     return f"{num} is an armstrong number"
-print(is_armstrong_number(150))
-print("\n")
+# print(is_armstrong_number(150))
+# print("\n")
 
 """
 Prime Number - A number which is divisible only by itself
@@ -135,8 +135,8 @@ def is_prime_number(num):
         if num % i == 0:
             return f"{num} is not a Prime Number"
     return f"{num} is a Prime Number"
-print(is_prime_number(29))
-print("\n")
+# print(is_prime_number(29))
+# print("\n")
 
 """First N composite numbers."""
 def is_composite_number(num):
@@ -146,8 +146,8 @@ def is_composite_number(num):
         if num % i == 0:
             return f"{num} is a Composite Number"
     return f"{num} is not a Composite Number"
-print(is_composite_number(18))
-print("\n")
+# print(is_composite_number(18))
+# print("\n")
 
 """
 Fibonacci Series - A series of number which when added to its previous number result in the next number
@@ -162,8 +162,8 @@ def is_fibonacci_series(num):
         first, second = second, first + second
         result_list.extend([second])
     return result_list
-print(is_fibonacci_series(5))
-print("\n")
+# print(is_fibonacci_series(5))
+# print("\n")
 
 """
 Palindrom Number - A number when reversed result in exact same number
@@ -179,8 +179,8 @@ def is_palindrom_number(num):
         reversed_num = (reversed_num * 10) + remainder
         num = num // 10
     return f"{original_num} is a palindrom number" if int(original_num) == int(reversed_num) else f"{original_num} is not a palindrom number"
-print(is_palindrom_number(16461))
-print("\n")
+# print(is_palindrom_number(16461))
+# print("\n")
 
 """
 Even or Odd Number
@@ -189,8 +189,8 @@ Output: Even, Odd, Odd, Odd, Even
 """
 def is_num_even_odd(num):
     return f"{num} is an Even Number" if num % 2 == 0 else f"{num} is an Odd Number"
-print(is_num_even_odd(10))
-print("\n")
+# print(is_num_even_odd(10))
+# print("\n")
 
 """
 Largest Among Three Numbers
@@ -223,8 +223,8 @@ def is_max_among_three_number(num1, num2, num3):
     if c > max_num:
         max_num
     return f"{max_num} is the largest number"
-print(is_max_among_three_number(10, 12, 7))
-print("\n")
+# print(is_max_among_three_number(10, 12, 7))
+# print("\n")
 
 """
 Factorial of a number.
@@ -238,8 +238,8 @@ def factorial_of_number(num):
         factorial_val *= num
         num -= 1
     return f"{factorial_val} is the factorial value of {original_num}"
-print(factorial_of_number(5))
-print('\n')
+# print(factorial_of_number(5))
+# print('\n')
 
 """
 Number is a perfect square.
@@ -251,8 +251,8 @@ def is_perfect_square(num):
     sq_value = original_num ** 0.5
     is_square = sq_value ** 2
     return f"{original_num} is a perfect square of {int(sq_value)}" if is_square == original_num else f"{original_num} is not related to perfect square"
-print(is_perfect_square(20))
-print('\n')
+# print(is_perfect_square(20))
+# print('\n')
 
 """
 Greatest Common Divisor (GCD) of two numbers.
@@ -264,8 +264,8 @@ def is_common_divisor(num1 = None, num2 = None):
     while num2 != 0:
         num1, num2 = num2, num1 % num2
     return f"Common Divisor for {original_num1}, {original_num2} is: {num1}"
-print(is_common_divisor(24, 28))
-print('\n')
+# print(is_common_divisor(24, 28))
+# print('\n')
 
 """
 Least Common Multiple (LCM) of two numbers.
@@ -278,8 +278,8 @@ def is_least_common(num1 = None, num2 = None):
         num1, num2 = num2, num2 % num1
     lcm = (original_num1 * original_num2) // num1
     return f"Least Common Multiple for {original_num1}, {original_num2} is: {lcm}"
-print(is_least_common(12, 15))
-print('\n')
+# print(is_least_common(12, 15))
+# print('\n')
 
 """
 Binary number to a decimal.
@@ -293,8 +293,8 @@ def is_decimal_from_binary(b_num):
     for index, char in enumerate(str_num):
         d_num += int(char) * (2**index)
     return f"{d_num}"
-print(is_decimal_from_binary(1011))
-print('\n')
+# print(is_decimal_from_binary(1011))
+# print('\n')
 
 """
 Decimal number to a binary
@@ -309,8 +309,8 @@ def is_binary_from_decimal(num):
         b_num = str(num % 2) + b_num
         num = num // 2
     return f"Binary Representation for {original_num} is: {b_num}"
-print(is_binary_from_decimal(11))
-print('\n')
+# print(is_binary_from_decimal(11))
+# print('\n')
 
 
 """
@@ -335,8 +335,8 @@ def get_prime_number_list(num):
             primes.append(candidate)
         candidate += 1
     return f'List of {original_num} Prime Numbers: {", ".join((map(str, primes)))}'
-print(get_prime_number_list(10))
-print('\n')
+# print(get_prime_number_list(10))
+# print('\n')
 
 """
 Number is a perfect number.
@@ -353,8 +353,8 @@ def is_perfect_number(num):
             if divisors_num != num:
                 divisors_list.append(divisors_num)
     return f'{original_num} is a Perfect Number as sum of following divisors: {", ".join((map(str, divisors_list)))} is equal to it'
-print(is_perfect_number(28))
-print('\n')
+# print(is_perfect_number(28))
+# print('\n')
 
 """
 Sum of digits of a number.
@@ -367,8 +367,8 @@ def is_sum_of_digits_of_number(num):
     for digit in str(num):
         sum_of_digits += int(digit)
     return f'Sum of digits for number {original_num} is: {sum_of_digits}'
-print(is_sum_of_digits_of_number(28))
-print('\n')
+# print(is_sum_of_digits_of_number(28))
+# print('\n')
 
 """
 Power of a number without using the built-in function.
@@ -378,8 +378,8 @@ def power_of_number(base_num, exponent):
     for i in range(exponent):
         result *= base_num
     return f"Power for provided number {base_num} is: {result}"
-print(power_of_number(4, 3))
-print('\n')
+# print(power_of_number(4, 3))
+# print('\n')
 
 """Find the n-th Fibonacci number."""
 def nth_fibonacci_number(num):
@@ -393,8 +393,8 @@ def nth_fibonacci_number(num):
         if i == (num - 1):
             last_number = second_num
     return f"Fibonacci Series for {original_num} is {', '.join(map(str, fibonacci_list))} and the nth number is: {last_number}"
-print(nth_fibonacci_number(10))
-print('\n')
+# print(nth_fibonacci_number(10))
+# print('\n')
 
 
 """Number is a strong number."""
@@ -414,8 +414,8 @@ def sum_of_squares_of_numbers(num):
     for i in range(1, num+1, 1):
         sq_sum += i**2
     return f"sum of the Squares of the first {original_num} natural numbers is: {sq_sum}"
-print(sum_of_squares_of_numbers(4))
-print('\n')
+# print(sum_of_squares_of_numbers(4))
+# print('\n')
 
 # Find the smallest among three numbers.
 def smallest_amoung_three(num1, num2, num3):
@@ -427,8 +427,8 @@ def smallest_amoung_three(num1, num2, num3):
     if num3 < smallest_num:
         smallest_num = num3
     return f"Smallest among {num1}, {num2}, {num3} is: {smallest_num}"
-print(smallest_amoung_three(10, 7, 17))
-print('\n')
+# print(smallest_amoung_three(10, 7, 17))
+# print('\n')
 
 """
 Number is a Harshad number.
@@ -440,8 +440,8 @@ def is_harshad_number(num):
     return f"{original_num} is a Harshad Number as its divisible by sum of its digits" \
         if original_num % num_sum == 2 else \
         f"{original_num} is not a Harshad Number"
-print(is_harshad_number(121))
-print('\n')
+# print(is_harshad_number(121))
+# print('\n')
 
 """Maximum and Minimum in a list of numbers."""
 def find_min_max(num_list):
@@ -457,8 +457,8 @@ def find_min_max(num_list):
         if min_num > i:
             min_num = i
     return f"Max Number, Min Number in list are: {max_num}, {min_num}"
-print(find_min_max([10, 8, 11, 43, 9, 1, 100]))    
-print('\n')
+# print(find_min_max([10, 8, 11, 43, 9, 1, 100]))    
+# print('\n')
 
 """
 Generate a Pascal's Triangle.
@@ -471,8 +471,8 @@ Generate a Pascal's Triangle.
 """
 def generate_pascal_triangle(num_of_rows):
     return "To be solved pascal triangle"
-print(generate_pascal_triangle(5))
-print('\n')
+# print(generate_pascal_triangle(5))
+# print('\n')
 
 """Sum of the cubes of the first N natural numbers."""
 def sum_of_cubes_of_numbers(num):
@@ -481,8 +481,8 @@ def sum_of_cubes_of_numbers(num):
     for number in range(1, num+1):
         sum_num += number**3
     return f"Sum of Cubes for Natural Numbers till {original_num} is:{sum_num}"
-print(sum_of_cubes_of_numbers(7))
-print('\n')
+# print(sum_of_cubes_of_numbers(7))
+# print('\n')
 
 """Prime factors of a number."""
 def is_prime_factors(num):
@@ -493,8 +493,8 @@ def is_prime_factors(num):
             num //= n_num
             first_prime.append(n_num)
     return f"Prime Factors for provided number {original_num} are: {', '.join(map(str, first_prime))}"
-print(is_prime_factors(18))
-print('\n')
+# print(is_prime_factors(18))
+# print('\n')
 
 """Missing number in an array of consecutive numbers."""
 def is_missing_number_in_array(num_list):
@@ -504,8 +504,8 @@ def is_missing_number_in_array(num_list):
     sum_num_list = sum(int(number) for number in num_list if str(number).isnumeric())
     missing_number = sum_num_list - arr_missin_sum 
     return f"Missing number in provided list is: {abs(missing_number)}"
-print(is_missing_number_in_array([1,2,3,4,6]))
-print('\n')
+# print(is_missing_number_in_array([1,2,3,4,6]))
+# print('\n')
 
 
 # Calculate the sum of the first N terms of an arithmetic series.

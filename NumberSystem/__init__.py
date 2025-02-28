@@ -113,10 +113,27 @@ class NumberSystem:
 
     maximum_among_three = lambda input_num_1, input_num_2, input_num_3 : pn.is_max_among_three_number(input_num_1, input_num_2, input_num_3) 
         
-    fibonacci_series = lambda input_num: pn.is_fibonacci_series(input_num)
+    smallest_amoung_three = lambda input_num_1, input_num_2, input_num_3 : pn.smallest_amoung_three(input_num_1, input_num_2, input_num_3)
 
+    fibonacci_series = lambda input_num : pn.is_fibonacci_series(input_num)
+
+    nth_fibonacci_number = lambda input_num : pn.nth_fibonacci_number(input_num)
+
+    strong_number = lambda input_num : pn.is_strong_number(input_num)
+
+    sum_of_squares_of_numbers = lambda input_num : pn.sum_of_squares_of_numbers(input_num)
+
+    harshad_number = lambda input_num : pn.is_harshad_number(input_num)
+
+    min_max_num_list = lambda input_num_list : pn.find_min_max(input_num_list)
+
+    pascal_triangle = lambda input_num : pn.generate_pascal_triangle(input_num)
+
+    sum_of_cubes_of_numbers = lambda input_num : pn.sum_of_cubes_of_numbers(input_num)
+
+    prime_factor = lambda input_num: pn.is_prime_factors(input_num)
+
+    missing_number_in_regual_list = lambda input_num_list : pn.is_missing_number_in_array(input_num_list)
+# Call the methods
 number_system = NumberSystem()
 
-# Call the methods
-percision_value_result = number_system.armstrong_number(111.456)
-NumberSystem().__init__()
