@@ -7,31 +7,82 @@ def find_max_in_list(input_list):
             max_num = num
     return max_num
 
+def find_min_in_list(input_list):
+    # return min(list(filter(lambda x: str(x).isnumeric(), input_list)))
+    min_num = float('inf')
+    for num in input_list:
+        if str(num).isnumeric() and num < min_num:
+            min_num = num
+    return min_num
+
+def insert_at_index(input_list = [], postion = 0, add_value = 0):
+    # input_list.insert(postion, add_value)
+    return  input_list[postion:] + [add_value] + input_list[:postion]
+
+def pop_at_index(input_list = [], postion = 0, add_value = 0):
+    return input_list.pop(postion)
+
+def sort_ascending(input_list = []):
+    # sorted(input_list)
+    n = len(input_list)
+    for i in range(n):
+        for j in range(i+1, n):
+            if input_list[i] > input_list[j]:
+                input_list[i], input_list[j] = input_list[j], input_list[i]
+    return input_list
+
+def sort_descending(input_list = []):
+    # sorted(input_list)
+    n = len(input_list)
+    for i in range(n):
+        for j in range(i+1, n):
+            if input_list[i] < input_list[j]:
+                input_list[i], input_list[j] = input_list[j], input_list[i]
+    return input_list
+
+def length_of_list(input_list = []):
+    # len(input_list)
+    count = 0
+    for val in input_list:
+        count += 1
+    return count
+
+def list_add_new_element_at_end(input_list = [], value = 0):
+    # input_list.append(value)
+    length = length_of_list(input_list)
+    input_list = input_list + [0]
+    input_list[length + 1] = value
+    return input_list
+
+def remove_specific_value(input_list = [], value = 0):
+    return input_list.remove(value)
+
+def count_value_occurrence_in_list(input_list = [], value = 0):
+    # input_list.count(value)
+    # count = count + 1 for val in input_list if val == value
+    count = 0
+    for val in input_list:
+        if val == value:
+            count += 1
+    return count
+
+def reverse_a_list(input_list = []):
+    # input_list[::-1]
+    list_len = len(input_list)
+    new_list = []
+    for index in range(list_len - 1, -1, -1):
+        new_list.append(input_list[index])
+    return new_list
+
+def sum_of_elements(input_list):
+    # sum(val for val in input_list)
+    # sum(input_list)
+    sum_list = 0
+    for val in input_list:
+        sum_list += val
+    return sum_list
+
 """
-Find the maximum number in a list.
-
-Find the minimum number in a list.
-
-Insert an element at a particular index in a list.
-
-Pop an element from a particular index in a list.
-
-Sort a list in ascending order.
-
-Sort a list in descending order.
-
-Find the length of a list.
-
-Append an element to the end of a list.
-
-Remove a specific element from a list.
-
-Count the occurrences of a specific element in a list.
-
-Reverse a list.
-
-Find the sum of all elements in a list.
-
 Find the average of all elements in a list.
 
 Find the median of a list.
