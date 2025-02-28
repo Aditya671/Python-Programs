@@ -71,14 +71,33 @@ list_system = ListSystem([1, 2, 3], ['a', 'b', 'c'])
 
 # Get the maximum value in a list
 max_value = list_system.max_in_list([1, 2, 3])
-print(max_value)  # Output: 3
+min_value = list_system.min_in_list([1, 2, 3])
+inserted_list = list_system.insert_at_index([1, 2, 3], 1, 4)
+popped_list = list_system.pop_at_index([1, 2, 3], 1)
+sorted_list = list_system.ascending_sort([3, 1, 2])
+list_length = list_system.list_length([1, 2, 3])
+new_list = list_system.add_value([1, 2, 3], 4)
+updated_list = list_system.remove_value([1, 2, 3, 2], 2)
+value_count = list_system.count_value_occurrence([1, 2, 3, 2])
+reversed_list = list_system.list_reverse([1, 2, 3])
+list_sum = list_system.sum_of_list_elements([1, 2, 3])
 ```
 
 ## API
 
-- `percision_value(input_num)`: Returns the precision value of the input number.
 The `ListSystem` class has the following methods:
 
 ### `__init__(self, *input_lists)`
 - Initializes the `ListSystem` instance with one or more input lists.
-- `max_in_list(self, input_list)`: Returns the maximum value in the given input list.
+- `max_in_list(input_list)`: Returns the maximum value in the input list.
+- `min_in_list(input_list)`: Returns the minimum value in the input list.
+- `insert_at_index(input_list, position, value)`: Inserts a value at the specified position in the input list.
+- `pop_at_index(input_list, position)`: Removes and returns the element at the specified position in the input list.
+- `ascending_sort(input_list)`: Sorts the input list in ascending order.
+- `descending_sort(input_list)`: Sorts the input list in descending order.
+- `list_length(input_list)`: Returns the length of the input list.
+- `add_value(input_list, value)`: Adds a new element to the end of the input list.
+- `remove_value(input_list, value)`: Removes the specified value from the input list.
+- `count_value_occurrence(input_list)`: Counts the number of occurrences of each value in the input list.
+- `list_reverse(input_list)`: Reverses the order of the elements in the input list.
+- `sum_of_list_elements(input_list)`: Calculates the sum of all elements in the input list.
