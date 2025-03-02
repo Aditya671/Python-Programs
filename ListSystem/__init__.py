@@ -35,5 +35,11 @@ class ListSystem:
     
     sum_of_list_elements = lambda input_list : pl.sum_of_elements(input_list)
 
+    average_of_list = lambda input_list : pl.average_of_list(input_list)
+    
+    median_of_list = lambda input_list : pl.median_of_list(input_list) 
+    
+    element_in_list = lambda input_list, ele : pl.element_in_list(input_list, ele)
+
 
 list_system = ListSystem()

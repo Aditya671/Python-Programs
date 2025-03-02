@@ -82,14 +82,30 @@ def sum_of_elements(input_list):
         sum_list += val
     return sum_list
 
+def average_of_list(input_list):
+    # Average = sum of all elements / length of list
+    return sum_of_elements(input_list) / length_of_list(input_list)
+
+def median_of_list(input_list = []):
+    # median is the middle value of the provided list, if odd length then middle element, if even then middle left + middle right / 2
+    input_list = sort_ascending(input_list) 
+    mid = len(input_list) // 2
+    if len(input_list) % 2 == 0:  # Even number of elements
+        return (input_list[mid] + input_list[~mid]) / 2
+    else:  # Odd number of elements
+        return input_list[mid]
+
+def element_in_list(input_list = [], value = 0):
+    for val in input_list:
+        if str(val) == str(value):
+            return f"Provided value: {value} is present in list :{input_list}"
+    return f"Provided value: {value} is not present in list :{input_list}"
+
+
 """
-Find the average of all elements in a list.
-
-Find the median of a list.
-
 Find the mode of a list.
 
-Check if a specific element is in a list.
+
 
 Concatenate two lists.
 
